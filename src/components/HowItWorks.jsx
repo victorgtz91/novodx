@@ -5,21 +5,19 @@ import Text from "./ui/Text";
 
 export default function HowItWorks({ steps = [] }) {
   return (
-    <Section>
-      <Container>
-        <div style={{ display: "grid", gap: 16 }}>
-          <Heading as="h2">How it works</Heading>
-          <ol style={{ display: "grid", gap: 12, margin: 0, paddingLeft: 20 }}>
-            {steps.map((step, idx) => (
-              <li key={idx}>
-                <Heading as="h3">{step.title}</Heading>
-                {step.desc ? <Text>{step.desc}</Text> : null}
-              </li>
-            ))}
-          </ol>
-        </div>
-      </Container>
-    </Section>
+    <section className="section">
+      <div className="container">
+        <h2>How it works</h2>
+        <ol className="list">
+          {steps.map((step, idx) => (
+            <li key={idx}>
+              <h3>{step.title}</h3>
+              {step.desc ? <p>{step.desc}</p> : null}
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
   );
 }
 

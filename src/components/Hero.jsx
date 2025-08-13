@@ -1,25 +1,20 @@
-import Container from "./ui/Container";
-import Heading from "./ui/Heading";
-import Text from "./ui/Text";
 import Button from "./ui/Button";
 
 export default function Hero({ title, subtitle, primaryCta, secondaryCta }) {
   return (
-    <section style={{ padding: "64px 0" }}>
-      <Container>
-        <div style={{ display: "grid", gap: 16 }}>
-          <Heading as="h1">{title}</Heading>
-          {subtitle ? <Text>{subtitle}</Text> : null}
-          <div style={{ display: "flex", gap: 12 }}>
-            {primaryCta ? (
-              <Button href={primaryCta.href} label={primaryCta.label} variant="primary" />
-            ) : null}
-            {secondaryCta ? (
-              <Button href={secondaryCta.href} label={secondaryCta.label} variant="secondary" />
-            ) : null}
-          </div>
+    <section className="section">
+      <div className="container">
+        <h1>{title}</h1>
+        {subtitle ? <p className="muted">{subtitle}</p> : null}
+        <div style={{ display: "flex", gap: 12, marginTop: 16 }}>
+          {primaryCta?.label ? (
+            <Button href={primaryCta.href} label={primaryCta.label} variant="primary" />
+          ) : null}
+          {secondaryCta?.label ? (
+            <Button href={secondaryCta.href} label={secondaryCta.label} variant="secondary" />
+          ) : null}
         </div>
-      </Container>
+      </div>
     </section>
   );
 }

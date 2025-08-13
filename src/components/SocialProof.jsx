@@ -3,8 +3,8 @@ import Section from "./ui/Section";
 
 export default function SocialProof({ logos = [], quotes = [] }) {
   return (
-    <Section>
-      <Container>
+    <section className="section">
+      <div className="container">
         {logos.length > 0 ? (
           <div style={{ display: "flex", gap: 16, flexWrap: "wrap", alignItems: "center" }}>
             {logos.map((logo, idx) => (
@@ -13,17 +13,17 @@ export default function SocialProof({ logos = [], quotes = [] }) {
           </div>
         ) : null}
         {quotes.length > 0 ? (
-          <div style={{ display: "grid", gap: 12 }}>
+          <div className="list">
             {quotes.map((q, idx) => (
               <figure key={idx} style={{ margin: 0 }}>
                 <blockquote style={{ margin: 0 }}>&ldquo;{q.quote}&rdquo;</blockquote>
-                <figcaption style={{ color: "#666", fontSize: 14 }}>{q.author}</figcaption>
+                <figcaption className="small muted">{q.author}</figcaption>
               </figure>
             ))}
           </div>
         ) : null}
-      </Container>
-    </Section>
+      </div>
+    </section>
   );
 }
 

@@ -5,21 +5,19 @@ import Text from "./ui/Text";
 
 export default function ValueProps({ title, items = [] }) {
   return (
-    <Section>
-      <Container>
-        <div style={{ display: "grid", gap: 24 }}>
-          {title ? <Heading as="h2">{title}</Heading> : null}
-          <div style={{ display: "grid", gap: 16 }}>
-            {items.map((item, idx) => (
-              <div key={idx}>
-                <Heading as="h3">{item.title}</Heading>
-                {item.desc ? <Text>{item.desc}</Text> : null}
-              </div>
-            ))}
-          </div>
+    <section className="section">
+      <div className="container">
+        {title ? <h2>{title}</h2> : null}
+        <div className="list">
+          {items.map((item, idx) => (
+            <div key={idx}>
+              <h3>{item.title}</h3>
+              {item.desc ? <p>{item.desc}</p> : null}
+            </div>
+          ))}
         </div>
-      </Container>
-    </Section>
+      </div>
+    </section>
   );
 }
 

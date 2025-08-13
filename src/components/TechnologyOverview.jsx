@@ -4,18 +4,16 @@ import Heading from "./ui/Heading";
 
 export default function TechnologyOverview({ title, bullets = [] }) {
   return (
-    <Section>
-      <Container>
-        <div style={{ display: "grid", gap: 16 }}>
-          {title ? <Heading as="h2">{title}</Heading> : null}
-          <ul style={{ margin: 0, paddingLeft: 20 }}>
-            {bullets.map((b, idx) => (
-              <li key={idx}>{b}</li>
-            ))}
-          </ul>
-        </div>
-      </Container>
-    </Section>
+    <section className="section">
+      <div className="container">
+        {title ? <h2>{title}</h2> : null}
+        <ul className="list">
+          {bullets.map((b, idx) => (
+            <li key={idx}>{b}</li>
+          ))}
+        </ul>
+      </div>
+    </section>
   );
 }
 
