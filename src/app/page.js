@@ -31,13 +31,19 @@ export default function Home() {
       />
 
       <div id="how" />
-      <HowItWorks
-        steps={[
-          { title: "Choose Your Test", desc: "From fertility and wellness to critical disease detection." },
-          { title: "Run It Anywhere", desc: "At home, at work, or in the field—no heavy setup." },
-          { title: "See Instant Results", desc: "Clear readings on-device and in your app." },
-        ]}
-      />
+      <section className="section section--alt" id="how">
+        <div className="container">
+          <h2 className="reveal-base" data-reveal="">How it works</h2>
+          <ol className="list">
+            {[{ title: "Choose Your Test", desc: "From fertility and wellness to critical disease detection." }, { title: "Run It Anywhere", desc: "At home, at work, or in the field—no heavy setup." }, { title: "See Instant Results", desc: "Clear readings on-device and in your app." }].map((s, i) => (
+              <li key={i} className="reveal-base" data-reveal="" data-delay={i}>
+                <h3>{s.title}</h3>
+                <p className="muted">{s.desc}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
 
       <div id="technology" />
       <TechnologyOverview
@@ -49,14 +55,21 @@ export default function Home() {
         ]}
       />
 
-      <section id="use-cases" className="section">
+      <section id="use-cases" className="section section--alt">
         <div className="container">
-          <h2>Designed for Every Moment That Matters.</h2>
-          <ul className="list">
-            <li>At-home — Take control without unnecessary appointments.</li>
-            <li>Field Programs — Trusted tool for mobile clinics and rapid response.</li>
-            <li>Clinics & Research — Precise data for clinicians, researchers, and programs.</li>
-          </ul>
+          <h2 className="reveal-base" data-reveal="">Designed for Every Moment That Matters.</h2>
+          <div className="grid grid-cols-1 grid-cols-2 grid-cols-3" style={{ marginTop: "var(--s3)" }}>
+            {[
+              { t: "At-home", d: "Accurate, fast, and secure diagnostics from the comfort of your home." },
+              { t: "Field Programs", d: "Portable testing for remote and emergency settings." },
+              { t: "Clinics & Research", d: "Precise data for clinicians and researchers worldwide." },
+            ].map((it, i) => (
+              <div key={i} className="card reveal-base" data-reveal="" data-delay={i}>
+                <h3 style={{ marginBottom: "6px" }}>{it.t}</h3>
+                <p className="muted">{it.d}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

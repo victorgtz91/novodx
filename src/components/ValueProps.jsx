@@ -7,12 +7,12 @@ export default function ValueProps({ title, items = [] }) {
   return (
     <section className="section">
       <div className="container">
-        {title ? <h2>{title}</h2> : null}
-        <div className="list">
+        {title ? <h2 className="reveal-base" data-reveal="">{title}</h2> : null}
+        <div className="grid grid-cols-1 grid-cols-2 grid-cols-3" style={{ marginTop: "var(--s3)" }}>
           {items.map((item, idx) => (
-            <div key={idx}>
-              <h3>{item.title}</h3>
-              {item.desc ? <p>{item.desc}</p> : null}
+            <div key={idx} className="card reveal-base" data-reveal="" data-delay={idx} tabIndex={0} style={{ outline: "none" }}>
+              <h3 style={{ marginBottom: "6px" }}>{item.title}</h3>
+              {item.desc ? <p className="muted">{item.desc}</p> : null}
             </div>
           ))}
         </div>

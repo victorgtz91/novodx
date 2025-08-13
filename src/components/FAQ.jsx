@@ -5,19 +5,17 @@ import Text from "./ui/Text";
 
 export default function FAQ({ items = [] }) {
   return (
-    <section className="section">
+    <section className="section" id="faq">
       <div className="container">
-        <h2>Frequently asked questions</h2>
-        <dl className="list" style={{ margin: 0 }}>
-          {items.map((item, idx) => (
-            <div key={idx}>
-              <dt style={{ fontWeight: 600 }}>{item.q}</dt>
-              <dd style={{ margin: 0 }}>
-                <p>{item.a}</p>
-              </dd>
-            </div>
+        <h2 className="reveal-base" data-reveal="">Frequently asked questions</h2>
+        <div style={{ marginTop: "var(--s3)" }}>
+          {items.map((it, i) => (
+            <details key={i} style={{ borderTop: "1px solid var(--border)", paddingBlock: "var(--s2)" }} className="reveal-base" data-reveal="" data-delay={i}>
+              <summary style={{ cursor: "pointer", fontWeight: 600 }}>{it.q}</summary>
+              <p className="muted" style={{ marginTop: "var(--s2)" }}>{it.a}</p>
+            </details>
           ))}
-        </dl>
+        </div>
       </div>
     </section>
   );
