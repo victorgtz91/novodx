@@ -13,66 +13,68 @@ export default function Home() {
   return (
     <main>
       <Hero
-        title="NOVODX — Diagnostics reimagined"
-        subtitle="Miniaturized immunofluorescence for home and field."
-        primaryCta={{ label: "Get in touch", href: "/contact" }}
-        secondaryCta={{ label: "Learn the tech", href: "/technology" }}
+        title="Empowering Tomorrow’s Health—Today."
+        subtitle="Bring lab-grade precision to the palm of your hand. Results in minutes. Decisions in the moment. Total control of your health."
+        primaryCta={{ label: "See the Future of Testing", href: "#technology" }}
+        secondaryCta={{ label: "Get in Touch", href: "/contact" }}
       />
 
+      <div id="why" />
       <ValueProps
-        title="Why NOVODX"
+        title="From Days to Minutes. From Labs to You."
         items={[
-          { title: "Precision", desc: "Lab-grade immunofluorescence in a handheld device." },
-          { title: "Speed", desc: "Actionable results in minutes." },
-          { title: "Platform", desc: "One reader, many assays." },
+          { title: "Lab-Quality at Your Fingertips", desc: "Clinical-grade diagnostics without the wait or travel." },
+          { title: "Instant Clarity", desc: "Fast results for confident, informed decisions." },
+          { title: "One Reader, Unlimited Tests", desc: "A single device powering a rapidly expanding menu—from women’s health to infectious diseases." },
         ]}
       />
 
+      <div id="how" />
       <HowItWorks
         steps={[
-          { title: "Collect", desc: "Sample with a simple cartridge." },
-          { title: "Read", desc: "Insert into the reader; automatic analysis." },
-          { title: "Act", desc: "Clear, quantitative results." },
+          { title: "Choose Your Test", desc: "From fertility and wellness to critical disease detection." },
+          { title: "Run It Anywhere", desc: "At home, at work, or in the field—no heavy setup." },
+          { title: "See Instant Results", desc: "Clear readings on-device and in your app." },
         ]}
       />
 
+      <div id="technology" />
       <TechnologyOverview
-        title="Technology overview"
+        title="Core Technology"
         bullets={[
-          "Fluorescent immunoassay optics",
-          "On-device calibration",
-          "Connectivity ready",
+          "Miniaturized immunofluorescence optics (Class I device)",
+          "Multi-assay capability across key use cases",
+          "Connectivity for guidance, results, and programs",
         ]}
       />
 
-      <Pricing
-        title="Early access"
-        price="By invitation"
-        period=""
-        bullets={[
-          "Pilot programs",
-          "Developer documentation",
-          "Priority support",
-        ]}
-      />
+      <section id="use-cases" className="section">
+        <div className="container">
+          <h2>Designed for Every Moment That Matters.</h2>
+          <ul className="list">
+            <li>At Home — Take control without unnecessary appointments.</li>
+            <li>In the Field — Trusted tool for mobile clinics and rapid response.</li>
+            <li>For Professionals — Precise data for clinicians, researchers, and programs.</li>
+          </ul>
+        </div>
+      </section>
 
-      <SocialProof
-        quotes={[
-          { quote: "The future of decentralized diagnostics.", author: "Advisor, MD PhD" },
-        ]}
-      />
+      <div id="proof" />
+      <SocialProof quotes={[{ quote: "The future of decentralized diagnostics.", author: "Healthcare Advisor" }]} />
 
+      <div id="faq" />
       <FAQ
         items={[
-          { q: "Who is NOVODX for?", a: "Healthcare teams and partners pioneering point-of-need testing." },
-          { q: "When can I try it?", a: "Join our early access list via the contact page." },
+          { q: "Who is NOVODX for?", a: "Partners and care teams pioneering point-of-need testing." },
+          { q: "When can I try it?", a: "Contact us to discuss pilots and early access." },
         ]}
       />
 
+      <div id="cta" />
       <CTASection
-        title="Build with us"
-        subtitle="Partners, clinicians and innovators — let’s accelerate access."
-        ctaLabel="Contact us"
+        title="Your Health Journey Starts Now."
+        subtitle="Join the movement—partners, clinicians, and innovators building the future of diagnostics."
+        ctaLabel="Contact Us"
         ctaHref="/contact"
       />
     </main>
