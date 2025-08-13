@@ -13,10 +13,11 @@ export default function Home() {
   return (
     <main>
       <Hero
-        title="Empowering Tomorrow’s Health—Today."
+        title="Transforming diagnostics for everyone"
         subtitle="Bring lab-grade precision to the palm of your hand. Results in minutes. Decisions in the moment. Total control of your health."
-        primaryCta={{ label: "See the Future of Testing", href: "#technology" }}
+        primaryCta={{ label: "Explore Our Technology", href: "/technology" }}
         secondaryCta={{ label: "Get in Touch", href: "/contact" }}
+        backgroundImage="/hero-girl-goldn.jpg"
       />
 
       <div id="why" />
@@ -52,9 +53,9 @@ export default function Home() {
         <div className="container">
           <h2>Designed for Every Moment That Matters.</h2>
           <ul className="list">
-            <li>At Home — Take control without unnecessary appointments.</li>
-            <li>In the Field — Trusted tool for mobile clinics and rapid response.</li>
-            <li>For Professionals — Precise data for clinicians, researchers, and programs.</li>
+            <li>At-home — Take control without unnecessary appointments.</li>
+            <li>Field Programs — Trusted tool for mobile clinics and rapid response.</li>
+            <li>Clinics & Research — Precise data for clinicians, researchers, and programs.</li>
           </ul>
         </div>
       </section>
@@ -65,8 +66,9 @@ export default function Home() {
       <div id="faq" />
       <FAQ
         items={[
-          { q: "Who is NOVODX for?", a: "Partners and care teams pioneering point-of-need testing." },
-          { q: "When can I try it?", a: "Contact us to discuss pilots and early access." },
+          { q: "Can the reader be used more than once? And cassettes?", a: "Reader can be used up to 1500 times. Each cassette can only be used once." },
+          { q: "Do I need an internet connection?", a: "No, you only need a phone with Bluetooth." },
+          { q: "Can more than one person use a single device?", a: "Yes, you can use one single device to test your entire household." },
         ]}
       />
 
