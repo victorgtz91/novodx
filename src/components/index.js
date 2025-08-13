@@ -12,4 +12,6 @@ export { default as HowItWorks } from "./HowItWorks";
 export { default as TechnologyOverview } from "./TechnologyOverview";
 export { default as SocialProof } from "./SocialProof";
 export { default as CTASection } from "./CTASection";
+export { default as Pricing } from "./Pricing";
+export { default as FAQ } from "./FAQ";
 

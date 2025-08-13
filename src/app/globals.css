@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+html, body { background:#fff; color:#111; }
+a { color: inherit; }
+main { padding: 48px 0; }
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
